@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Planes</title>
+    <script src="scrypt.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">Calculadora de Planes</h1>
+        
+        <div class="cards-container">
+            <!-- Tarjeta de Cálculo de Precio -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Cálculo Mensual</h2>
+                </div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <label for="input_mes">Precio Semanal:</label>
+                        <div class="input-with-icon">
+                            <span class="currency-symbol">$</span>
+                            <input type="number" id="input_mes" placeholder="0">
+                        </div>
+                    </div>
+                    <button onclick="calcular_precio()" class="btn-calculate">
+                        <span class="btn-text">Calcular</span>
+                    </button>
+                    <p id="resultado" class="result"></p>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Cálculo de Fecha -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Fecha del Plan</h2>
+                </div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <label for="input_meses_futuros">Duración del Plan:</label>
+                        <div class="input-with-icon">
+                            <input type="number" id="input_meses_futuros" placeholder="0">
+                            <span class="month-text">meses</span>
+                        </div>
+                    </div>
+                    <button onclick="calcular_fecha_futura()" class="btn-calculate">
+                        <span class="btn-text">Calcular Fecha</span>
+                    </button>
+                    <p id="resultado_fecha" class="result"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

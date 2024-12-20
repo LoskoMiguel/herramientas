@@ -1,0 +1,177 @@
+/* Variables de colores */
+:root {
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+    --background-color: #f0f2f5;
+    --card-background: #ffffff;
+    --text-color: #1f2937;
+    --text-secondary: #6b7280;
+    --border-color: #e5e7eb;
+    --success-color: #10b981;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-title {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+/* Contenedor de tarjetas */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* Estilos de las tarjetas */
+.card {
+    background: var(--card-background);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    background: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* Grupos de input */
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.currency-symbol,
+.month-text {
+    position: absolute;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.currency-symbol {
+    left: 1rem;
+}
+
+.month-text {
+    right: 1rem;
+}
+
+/* Estilos de input */
+input[type="number"] {
+    width: 100%;
+    padding: 0.75rem;
+    padding-left: 2rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+/* Botones */
+.btn-calculate {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-calculate:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-text {
+    display: inline-block;
+    transform: translateY(1px);
+}
+
+/* Resultados */
+.result {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: var(--background-color);
+    border-radius: 0.5rem;
+    text-align: center;
+    font-weight: 500;
+    min-height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+}
